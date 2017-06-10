@@ -1,4 +1,7 @@
 var toolbarButtons = document.querySelectorAll('#toolbar a')
+var editor = document.querySelector('#editor')
+var titleInput = document.querySelector('#title')
+
 for (var i = 0; i < toolbarButtons.length; i++) {
   toolbarButtons[i].addEventListener('click', function (e) {
     var command = this.dataset.command
@@ -11,13 +14,19 @@ for (var i = 0; i < toolbarButtons.length; i++) {
         document.execCommand(this.dataset.command, false, url)
       }
     } else document.execCommand(this.dataset.command, false, null)
+    editor.focus()
   })
 }
 
-var editor = document.querySelector('#editor')
 editor.addEventListener('keydown', function (e) {
   if (e.key === 'Tab') {
-    document.execCommand('indent', false, null)
+    // document.execCommand('indent', false, null)
     e.preventDefault()
+  }
+})
+
+titleInput.addEventListener('keydown', function (e) {
+  if (e.key === 'Enter') {
+    editor.focus()
   }
 })
