@@ -66,37 +66,3 @@ a {
 .toolbar-button:hover {
   font-size: 2em;
 }
-
-a[data-command='redo'],
-a[data-command='strikeThrough'],
-a[data-command='justifyFull'],
-a[data-command='insertOrderedList'],
-a[data-command='outdent'],
-a[data-command='p'],
-a[data-command='superscript'] {
-  margin-right: 5px;
-  border-radius: 0 3px 3px 0;
-}
-
-a[data-command='undo'],
-.fore-wrapper,
-a[data-command='justifyLeft'],
-a[data-command='insertUnorderedList'],
-a[data-command='indent'],
-a[data-command='h1'],
-a[data-command='subscript'] {
-  border-radius: 3px 0 0 3px;
-}
-
-a.palette-item {
-  height: 1em;
-  border-radius: 3px;
-  margin: 2px;
-  width: 1em;
-  border: 1px solid #CCC;
-}
-
-a.palette-item:hover {
-  border: 1px solid #CCC;
-  box-shadow: 0 0 3px #333;
-}
