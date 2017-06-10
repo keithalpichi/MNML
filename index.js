@@ -13,3 +13,11 @@ for (var i = 0; i < toolbarButtons.length; i++) {
     } else document.execCommand(this.dataset.command, false, null)
   })
 }
+
+var editor = document.querySelector('#editor')
+editor.addEventListener('keydown', function (e) {
+  if (e.key === 'Tab') {
+    document.execCommand('indent', false, null)
+    e.preventDefault()
+  }
+})
