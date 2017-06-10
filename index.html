@@ -4,46 +4,31 @@
     <meta charset="utf-8">
     <title>Text Editor</title>
     <link href='./styles.css' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet'>
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   </head>
   <body>
     <div id="toolbar">
       <div>
-        <a href="#" data-command='undo'><i class='fa fa-undo'></i></a>
-        <a href="#" data-command='redo'><i class='fa fa-repeat'></i></a>
-        <div class="fore-wrapper"><i class='fa fa-font' style='color:#C96;'></i>
-          <div class="fore-palette">
-          </div>
-        </div>
-        <div class="back-wrapper"><i class='fa fa-font' style='background:#C96;'></i>
-          <div class="back-palette">
-          </div>
-        </div>
+        <a class='toolbar-button' href="#" data-command='h1'>H1</a>
+        <a class='toolbar-button' href="#" data-command='h2'>H2</a>
+        <a class='toolbar-button' href="#" data-command='p'>p</a>
+        <a class='toolbar-button' href="#" data-command='bold'><b>B</b></a>
+        <a class='toolbar-button' href="#" data-command='italic'><i>I</i></a>
+        <a class='toolbar-button' href="#" data-command='underline'><u>U</u></a>
       </div>
       <div>
-        <a href="#" data-command='h1'>H1</a>
-        <a href="#" data-command='h2'>H2</a>
-        <a href="#" data-command='p'>p</a>
-        <a href="#" data-command='bold'><b>B</b></a>
-        <a href="#" data-command='italic'><i>I</i></a>
-        <a href="#" data-command='underline'><u>U</u></a>
-        <a href="#" data-command='strikeThrough'><s>S</s></a>
-      </div>
-      <div>
-        <a href="#" data-command='justifyLeft'><i class='fa fa-align-left'></i></a>
-        <a href="#" data-command='justifyCenter'><i class='fa fa-align-center'></i></a>
-        <a href="#" data-command='justifyRight'><i class='fa fa-align-right'></i></a>
-        <a href="#" data-command='justifyFull'><i class='fa fa-align-justify'></i></a>
-        <a href="#" data-command='indent'><i class='fa fa-indent'></i></a>
-        <a href="#" data-command='outdent'><i class='fa fa-outdent'></i></a>
-        <a href="#" data-command='insertUnorderedList'><i class="fa fa-list" aria-hidden="true"></i></a>
-        <a href="#" data-command='insertOrderedList'><i class='fa fa-list-ol'></i></a>
-        <a href="#" data-command='createlink'><i class='fa fa-link'></i></a>
-        <a href="#" data-command='unlink'><i class='fa fa-unlink'></i></a>
-        <a href="#" data-command='insertimage'><i class='fa fa-image'></i></a>
+        <a class='toolbar-button' href="#" data-command='indent'><i class='fa fa-indent'></i></a>
+        <a class='toolbar-button' href="#" data-command='outdent'><i class='fa fa-outdent'></i></a>
+        <a class='toolbar-button' href="#" data-command='insertUnorderedList'><i class="fa fa-list" aria-hidden="true"></i></a>
+        <a class='toolbar-button' href="#" data-command='insertOrderedList'><i class='fa fa-list-ol'></i></a>
+        <a class='toolbar-button' href="#" data-command='createlink'><i class='fa fa-link'></i></a>
+        <a class='toolbar-button' href="#" data-command='unlink'><i class='fa fa-unlink'></i></a>
+        <a class='toolbar-button' href="#" data-command='insertimage'><i class='fa fa-image'></i></a>
       </div>
     </div>
+
+    <input id='title' type='text' name='title' placeholder='Title' maxlength='30'>
 
     <div id='editor' contenteditable>
     </div>

@@ -2,6 +2,7 @@ body {
   margin: 0 auto;
   width: 600px;
   font-family: 'Lato', 'sans serif';
+  font-size: 16px;
 }
 
 a {
@@ -9,10 +10,8 @@ a {
 }
 
 #editor {
-  /*box-shadow: 0 0 2px #CCC;*/
   min-height: 150px;
   overflow: auto;
-  padding: 1em;
   margin-top: 20px;
   resize: none;
   outline: none;
@@ -24,24 +23,33 @@ a {
   border-bottom: 1px solid #CCC;
 }
 
-#toolbar a,
-.fore-wrapper,
-.back-wrapper {
+#toolbar a {
   background: #FFF;
   color: black;
   padding: 5px;
   width: 1.5em;
-  margin: -2px;
   margin-top: 10px;
   display: inline-block;
   text-decoration: none;
 }
 
-.toolbar a:hover,
-.fore-wrapper:hover,
-.back-wrapper:hover {
-  background: #f2f2f2;
-  border-color: #8c8c8c;
+#title {
+  overflow: auto;
+  border: none;
+  font-size: 3.5em;
+  font-family: 'Lato';
+  font-weight: bold;
+  outline: none;
+  width: inherit;
+  margin: .25em 0;
+}
+
+.toolbar-button {
+  transition: all 0.25s ease;
+}
+
+.toolbar-button:hover {
+  font-size: 2em;
 }
 
 a[data-command='redo'],
@@ -76,34 +84,4 @@ a.palette-item {
 a.palette-item:hover {
   border: 1px solid #CCC;
   box-shadow: 0 0 3px #333;
-}
-
-.fore-palette,
-.back-palette {
-  display: none;
-}
-
-.fore-wrapper,
-.back-wrapper {
-  display: inline-block;
-  cursor: pointer;
-}
-
-.fore-wrapper:hover .fore-palette,
-.back-wrapper:hover .back-palette {
-  display: block;
-  float: left;
-  position: absolute;
-  padding: 3px;
-  width: 160px;
-  background: #FFF;
-  border: 1px solid #DDD;
-  box-shadow: 0 0 5px #CCC;
-  height: 70px;
-}
-
-.fore-palette a,
-.back-palette a {
-  background: #FFF;
-  margin-bottom: 2px;
 }
