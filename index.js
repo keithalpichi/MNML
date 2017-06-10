@@ -37,22 +37,30 @@ titleInput.addEventListener('keydown', function (e) {
 })
 
 var saveToStorage = function () {
-  var innerHTML = editor.innerHTML
-  window.localStorage.setItem('editor-text', innerHTML)
+  var editorInnerHTML = editor.innerHTML
+  var titleText = titleInput.value
+  window.localStorage.setItem('mnml-text', editorInnerHTML)
+  window.localStorage.setItem('mnml-title', titleText)
 }
 
 var loadFromStorage = function () {
-  var innerHTML = window.localStorage.getItem('editor-text')
+  var innerHTML = window.localStorage.getItem('mnml-text')
+  var titleText = window.localStorage.getItem('mnml-title')
   if (innerHTML) {
     editor.innerHTML = innerHTML
+  }
+  if (titleText) {
+    titleInput.value = titleText
   }
 }
 
 var deleteStorage = function () {
   var respose = window.confirm('Are you sure you want to delete the whole document?')
   if (respose) {
-    window.localStorage.removeItem('editor-text')
+    window.localStorage.removeItem('mnml-text')
+    window.localStorage.removeItem('mnml-title')
     editor.innerHTML = ''
+    titleInput.value = ''
   }
 }
 
