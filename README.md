@@ -1,3 +1,7 @@
 # MNML
 
-> The minimal text editor. Free from clutter and distractions
+# About
+A minimal text editor. Free from clutter and distractions
+
+# To Do
+- Implement toolbar button active styling
