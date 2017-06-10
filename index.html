@@ -10,27 +10,27 @@
   <body>
     <div id="toolbar">
       <div>
-        <a class='toolbar-button' href="#" data-command='h1'>H1</a>
-        <a class='toolbar-button' href="#" data-command='h2'>H2</a>
-        <a class='toolbar-button' href="#" data-command='p'>p</a>
-        <a class='toolbar-button' href="#" data-command='bold'><b>B</b></a>
-        <a class='toolbar-button' href="#" data-command='italic'><i>I</i></a>
-        <a class='toolbar-button' href="#" data-command='underline'><u>U</u></a>
+        <a tabindex="-1" class='toolbar-button' href="#" data-command='h1'>H1</a>
+        <a tabindex="-1" class='toolbar-button' href="#" data-command='h2'>H2</a>
+        <a tabindex="-1" class='toolbar-button' href="#" data-command='p'>p</a>
+        <a tabindex="-1" class='toolbar-button' href="#" data-command='bold'><b>B</b></a>
+        <a tabindex="-1" class='toolbar-button' href="#" data-command='italic'><i>I</i></a>
+        <a tabindex="-1" class='toolbar-button' href="#" data-command='underline'><u>U</u></a>
       </div>
       <div>
-        <a class='toolbar-button' href="#" data-command='indent'><i class='fa fa-indent'></i></a>
-        <a class='toolbar-button' href="#" data-command='outdent'><i class='fa fa-outdent'></i></a>
-        <a class='toolbar-button' href="#" data-command='insertUnorderedList'><i class="fa fa-list" aria-hidden="true"></i></a>
-        <a class='toolbar-button' href="#" data-command='insertOrderedList'><i class='fa fa-list-ol'></i></a>
-        <a class='toolbar-button' href="#" data-command='createlink'><i class='fa fa-link'></i></a>
-        <a class='toolbar-button' href="#" data-command='unlink'><i class='fa fa-unlink'></i></a>
-        <a class='toolbar-button' href="#" data-command='insertimage'><i class='fa fa-image'></i></a>
+        <a tabindex="-1" class='toolbar-button' href="#" data-command='indent'><i class='fa fa-indent'></i></a>
+        <a tabindex="-1" class='toolbar-button' href="#" data-command='outdent'><i class='fa fa-outdent'></i></a>
+        <a tabindex="-1" class='toolbar-button' href="#" data-command='insertUnorderedList'><i class="fa fa-list" aria-hidden="true"></i></a>
+        <a tabindex="-1" class='toolbar-button' href="#" data-command='insertOrderedList'><i class='fa fa-list-ol'></i></a>
+        <a tabindex="-1" class='toolbar-button' href="#" data-command='createlink'><i class='fa fa-link'></i></a>
+        <a tabindex="-1" class='toolbar-button' href="#" data-command='unlink'><i class='fa fa-unlink'></i></a>
+        <a tabindex="-1" class='toolbar-button' href="#" data-command='insertimage'><i class='fa fa-image'></i></a>
       </div>
     </div>
 
-    <input id='title' type='text' name='title' placeholder='Title' maxlength='30'>
+    <input tabindex="1" id='title' type='text' name='title' placeholder='Title' maxlength='30'>
 
-    <div id='editor' contenteditable>
+    <div id='editor' contenteditable tabindex="2">
     </div>
 
     <script src='./index.js'></script>
