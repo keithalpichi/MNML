@@ -12,6 +12,10 @@ for (var i = 0; i < toolbarButtons.length; i++) {
       if (url.length > 7) {
         document.execCommand(this.dataset.command, false, url)
       }
+    } else if (command === 'save') {
+      saveToStorage()
+    } else if (command === 'delete') {
+      deleteStorage()
     } else {
       document.execCommand(this.dataset.command, false, null)
     }
@@ -31,3 +35,25 @@ titleInput.addEventListener('keydown', function (e) {
     editor.focus()
   }
 })
+
+var saveToStorage = function () {
+  var innerHTML = editor.innerHTML
+  window.localStorage.setItem('editor-text', innerHTML)
+}
+
+var loadFromStorage = function () {
+  var innerHTML = window.localStorage.getItem('editor-text')
+  if (innerHTML) {
+    editor.innerHTML = innerHTML
+  }
+}
+
+var deleteStorage = function () {
+  var respose = window.confirm('Are you sure you want to delete the whole document?')
+  if (respose) {
+    window.localStorage.removeItem('editor-text')
+    editor.innerHTML = ''
+  }
+}
+
+loadFromStorage()
