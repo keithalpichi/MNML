@@ -8,31 +8,36 @@
     <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   </head>
   <body>
-    <div id="toolbar">
-      <div>
-        <a tabindex="-1" class='toolbar-button' href="#" data-command='h1'>H1</a>
-        <a tabindex="-1" class='toolbar-button' href="#" data-command='h2'>H2</a>
-        <a tabindex="-1" class='toolbar-button' href="#" data-command='p'>p</a>
-        <a tabindex="-1" class='toolbar-button' href="#" data-command='bold'><b>B</b></a>
-        <a tabindex="-1" class='toolbar-button' href="#" data-command='italic'><i>I</i></a>
-        <a tabindex="-1" class='toolbar-button' href="#" data-command='underline'><u>U</u></a>
-        <a tabindex="-1" class='toolbar-button' href="#" data-command='save'><i class="fa fa-floppy-o"></i></a>
-        <a tabindex="-1" class='toolbar-button' href="#" data-command='delete'><i class="fa fa-trash-o"></i></a>
-      </div>
-      <div>
-        <a tabindex="-1" class='toolbar-button' href="#" data-command='indent'><i class='fa fa-indent'></i></a>
-        <a tabindex="-1" class='toolbar-button' href="#" data-command='outdent'><i class='fa fa-outdent'></i></a>
-        <a tabindex="-1" class='toolbar-button' href="#" data-command='insertUnorderedList'><i class="fa fa-list"></i></a>
-        <a tabindex="-1" class='toolbar-button' href="#" data-command='insertOrderedList'><i class='fa fa-list-ol'></i></a>
-        <a tabindex="-1" class='toolbar-button' href="#" data-command='createlink'><i class='fa fa-link'></i></a>
-        <a tabindex="-1" class='toolbar-button' href="#" data-command='unlink'><i class='fa fa-unlink'></i></a>
-        <a tabindex="-1" class='toolbar-button' href="#" data-command='insertimage'><i class='fa fa-image'></i></a>
-      </div>
-    </div>
+    <div id='main-container'>
 
-    <input tabindex="1" id='title' type='text' name='title' placeholder='Title' maxlength='30'>
+      <div id="toolbar">
+        <div>
+          <a tabindex="-1" class='toolbar-button' href="#" data-command='h1'>H1</a>
+          <a tabindex="-1" class='toolbar-button' href="#" data-command='h2'>H2</a>
+          <a tabindex="-1" class='toolbar-button' href="#" data-command='p'>p</a>
+          <a tabindex="-1" class='toolbar-button' href="#" data-command='bold'><b>B</b></a>
+          <a tabindex="-1" class='toolbar-button' href="#" data-command='italic'><i>I</i></a>
+          <a tabindex="-1" class='toolbar-button' href="#" data-command='underline'><u>U</u></a>
+          <a tabindex="-1" class='toolbar-button' href="#" data-command='save'><i class="fa fa-floppy-o"></i></a>
+          <a tabindex="-1" class='toolbar-button' href="#" data-command='delete'><i class="fa fa-trash-o"></i></a>
+        </div>
+        <div>
+          <a tabindex="-1" class='toolbar-button' href="#" data-command='indent'><i class='fa fa-indent'></i></a>
+          <a tabindex="-1" class='toolbar-button' href="#" data-command='outdent'><i class='fa fa-outdent'></i></a>
+          <a tabindex="-1" class='toolbar-button' href="#" data-command='insertUnorderedList'><i class="fa fa-list"></i></a>
+          <a tabindex="-1" class='toolbar-button' href="#" data-command='insertOrderedList'><i class='fa fa-list-ol'></i></a>
+          <a tabindex="-1" class='toolbar-button' href="#" data-command='createlink'><i class='fa fa-link'></i></a>
+          <a tabindex="-1" class='toolbar-button' href="#" data-command='unlink'><i class='fa fa-unlink'></i></a>
+          <a tabindex="-1" class='toolbar-button' href="#" data-command='insertimage'><i class='fa fa-image'></i></a>
+        </div>
+      </div>
 
-    <div id='editor' contenteditable tabindex="2">
+      <div id='content'>
+        <input tabindex="1" id='title' type='text' name='title' placeholder='Title' maxlength='30'>
+        <hr/>
+        <div id='editor' contenteditable tabindex="2">
+      </div>
+      </div>
     </div>
 
     <script src='./index.js'></script>
