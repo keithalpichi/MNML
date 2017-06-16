@@ -15,4 +15,5 @@ A minimal text editor. Free from clutter and distractions
 
 # To Do
 - Implement toolbar button active styling
-- allow user to download and upload their own doc
+- Implement light, sepia, and dark theme
+- Allow user to download and upload their own doc
