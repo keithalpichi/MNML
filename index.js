@@ -9,7 +9,7 @@ for (var i = 0; i < toolbarButtons.length; i++) {
       document.execCommand('formatBlock', false, command)
     } else if (command === 'createlink' || command === 'insertimage') {
       var url = window.prompt('Enter the link here: ', 'http:\/\/')
-      if (url.length > 7) {
+      if (url && url.length > 7) {
         document.execCommand(this.dataset.command, false, url)
       }
     } else if (command === 'save') {
